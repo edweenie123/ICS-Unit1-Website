@@ -1,0 +1,242 @@
+<html>
+    <!-- Edwin Chen -->
+    <head>
+
+        <!-- Adds Google Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <title>Table of Contents</title>
+
+        <style>
+            /* This is the comment syntax for CSS */
+
+            /* Loading custom fonts*/
+            @font-face { font-family: Roboto; src: url('Fonts/Roboto-Medium.ttf');}
+            @font-face { font-family: Roboto; font-weight: bold; src: url('Fonts/Roboto-Bold.ttf');}
+            @font-face { font-family: Roboto; font-weight: lighter; src: url('Fonts/Roboto-Thin.ttf');}
+
+            /* Changes text select color */
+            ::selection {
+                background: #330300; 
+            }
+            
+            html{
+                /* Forces vertical scrollbar to be active by default */
+                overflow-y: scroll;
+            }
+            body{
+                /* Removes horizontal scrollbar */
+                overflow-x: hidden;
+                margin:0;
+                background-image: url("Images/city.png");
+                background-size: 200px;
+                
+            }
+           
+            ul{
+                /* Removes list dots */
+                list-style-type:none;
+                /* Remove margin from top*/
+                margin: 0;
+                /* Remove padding from left*/
+                padding: 0;
+                left: -1;
+                background-color: #1c1c1c;
+                /* Make it so the position of the nav bar never changes*/
+                position: fixed;
+
+                /* Set navbar 0px from the top */
+                top: 0;
+                width: 100%;
+                
+                /* Creates shadow around the dropdown navbar */
+                box-shadow: 0px 10px 25px rgba(0,0,0,0.7); 
+                /* Make it so images don't render above the navbar*/
+                z-index: 1;
+            }
+
+            li{
+                /* Makes list elements go left to right*/
+                float: left;
+            }
+
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                
+                /* Changes the width and height of the element */
+                padding: 23px 26px;
+                text-decoration: none;
+                font-family: Roboto;
+            }
+
+            .header{
+                text-align: center;
+                position: relative;
+                width: 100%;
+                box-shadow: 0px 10px 25px rgba(0,0,0,0.7);
+            }
+            .header-image{
+                width:100%;
+            }
+            .header-text{
+                color: white;
+               
+                font-family: Roboto;
+                font-size: 30;
+                font-weight: thin;
+                position: absolute;
+                /* Changes position from top by 50% */
+                top: 50%;
+                /* Changes position from left by 50% */
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .toc{
+                background-color: #1c1c1c;
+                /* Centers unorderedlist */
+                margin: auto;
+                width: 50%;
+                box-shadow: 0px 10px 25px rgba(0,0,0,0.7); 
+                
+            }
+
+            /* CSS for elements inside toc */
+            .toc a{
+                /* treats each element as a block (takes up whole width) */
+                display: block;
+                
+                /* Edit space between list items*/
+                padding: 30px;
+                font-family: Roboto;
+                /* Removes link underline */
+                text-decoration: none;
+
+                text-align: left;
+                color: white;
+            }
+            
+            /* CSS of a:hover, dd-active and activated classes 
+                The :not(.nav-elem) exludes elements with class "nav-elem" from this CSS
+            */
+            a:hover:not(.nav-elem), .dd-active, .activated{
+                /* Using the rgb values for color */
+                background-color: rgb(58, 32, 42);
+                color: white;
+            }
+
+            .dd-content{
+                display: none;
+                background-color: #262626;
+                /* Creates a shadow around the dropdown content */
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.7);
+                
+            }
+
+            .dd-content a{
+                color: grey;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            }
+            
+            .dd-content a:hover, .nav-elem:hover{
+                background-color: #2b2b2b;
+            }
+            
+            /* Edit CSS for Google Icons */
+            .material-icons{
+                /* Make icons float to the right of their container*/
+                float: right;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li><a class="Activated" href="tableOfContents.html">Table of Contents</a></li>
+            <li><a class="nav-elem" href="Resume.html">My Resume</a></li>
+            <li><a class="nav-elem" href="DesignPage.html">Design Page</a></li>
+        </ul>
+
+        <br><br><br>
+
+        <div class="header">
+            <img class="header-image" src="Images/header.png">
+            <div class="header-text">ICS2O - TABLE OF CONTENTS</div>
+        </div>  
+        
+        <!-- div defines a section in the HTML -->
+        <div class="toc">
+            <a href="../TestSite/HTMLBaby.html">Practice Website</a>
+            <a class="dd-btn">HTML Assignments
+                <!-- <i> is used to load icons -->
+                <!-- loading icon with name "arrow_drop_down" from Google Icons-->
+                <i class="material-icons">arrow_drop_down</i>
+            </a>
+                <!-- Creating a div within a div -->
+                <div class="dd-content">
+                    <a href="../HTMLAssignments/Assignment2.html">Assignment 2</a>
+                    <a href="../HTMLAssignments/Assignment3.html">Assignment 3</a>
+                    <a href="../HTMLAssignments/Assignment4.html">Assignment 4</a>
+                    <a href="../HTMLAssignments/Assignment5.html">Assignment 5</a>
+                    <a href="../HTMLAssignments/Assignment6.html">Assignment 6</a>
+                    <a href="../HTMLAssignments/Assignment7.html">Assignment 7</a>
+                </div>
+            
+            <a class="dd-btn">Table Assignments
+                <i class="material-icons">arrow_drop_down</i>
+            </a>
+                <div class="dd-content">
+                    <a href="../TableAssignments/t1.html">Assignment 1</a>
+                    <a href="../TableAssignments/t2.html">Assignment 2</a>
+                    <a href="../TableAssignments/t3.html">Assignment 3</a>
+                    <a href="../TableAssignments/t4.html">Assignment 4</a>
+                    <a href="../TableAssignments/t5.html">Assignment 5</a>
+                </div>
+            
+            <a class="dd-btn">CSS Exercises
+                <i class="material-icons">arrow_drop_down</i>    
+            </a>
+                <div class="dd-content">
+                    <a href="../CSS Exercises/A1.html">Assignment 1</a>
+                    <a href="../CSS Exercises/A2.html">Assignment 2</a>
+                    <a href="../CSS Exercises/A3.html">Assignment 3</a>
+                    <a href="../CSS Exercises/A4.html">Assignment 4</a>   
+                </div>
+            
+        </div>
+        
+        <!-- Start JavaScript Code -->
+        <script>
+            // This is the comment syntax of JavaScript
+            
+            // Get all elements with class name of "dd-btn" and store them in a var called "dropdown"
+            var dropdown = document.getElementsByClassName("dd-btn");
+
+            // Goes through each of the dropdown elements with a for loop
+            for (i = 0; i < dropdown.length; i++) {
+                // Adds a click event listener to each dropdown element
+                dropdown[i].addEventListener("click", function() {
+                    // Code below is run after clicking a dropdown element
+                    // Activate CSS under the classname "dd-active"
+                    this.classList.toggle("dd-active");
+                    // Get the content of the dropwdown element, the element right under the dropdown
+                    var ddContent = this.nextElementSibling;
+                    
+                    // if dropdown content is active, disable it...
+                    if (ddContent.style.display == "block") {
+                        ddContent.style.display = "none";
+                
+                    } 
+                    // otherwise if the content is inactive, activate it
+                    else {
+                        ddContent.style.display = "block";
+                    }
+                });
+            }
+        </script>
+        <!-- End of JavaScript Code-->
+
+    </body>
+</html>

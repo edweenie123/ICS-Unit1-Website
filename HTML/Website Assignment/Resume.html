@@ -1,0 +1,314 @@
+<html>
+    <!-- Edwin Chen -->
+    <head>
+        <style>
+            @font-face { font-family: Roboto; src: url('Fonts/Roboto-Medium.ttf');}
+            @font-face { font-family: Roboto; font-weight: bold; src: url('Fonts/Roboto-Bold.ttf');}
+            @font-face { font-family: Roboto; font-weight: lighter; src: url('Fonts/Roboto-Thin.ttf');}
+
+            /* Changes text select color */
+            ::selection {
+                background: black; 
+            }
+           
+            body{
+                background-image: url("Images/city.png");
+                background-size: 200px;
+                margin: 100px;
+            }
+            .nav-bar{
+                /* Removes list dots */
+                list-style-type:none;
+                /* Remove margin from top*/
+                margin: 0;
+                /* Remove padding from left*/
+                padding: 0;
+                left: -1;
+                background-color: #1c1c1c;
+                /* Make it so the position of the nav bar never changes*/
+                position: fixed;
+
+                /* Set navbar 0px from the top */
+                top: 0;
+                width: 101%;
+
+                /* Creates shadow around the dropdown navbar */
+                box-shadow: 0px 10px 25px rgba(0,0,0,0.7); 
+            }
+            .nav-bar li{
+                /* Makes list elements go left to right*/
+                float: left;
+            }
+
+            .nav-bar li a{
+                display: block;
+                color: white;
+                text-align: center;
+                
+                /* Changes the width and height of the element */
+                padding: 23px 26px;
+                text-decoration: none;
+                font-family: Roboto;
+            }
+            .activated{
+                /* Using the rgb values for color */
+                background-color: rgb(58, 32, 42);
+                color: white;
+            }
+            .nav-elem:hover{
+                background-color: #2b2b2b;
+            }
+
+            #resume{
+                width: 100%;
+                padding: 60px;
+                box-shadow: 0px 10px 25px rgba(0,0,0,1);
+                background-color: white;;
+            }
+
+            #title{
+                font-family: Roboto;
+                font-size: 50;
+            }
+            #subtitle{
+                font-family: Roboto;
+                font-size: 27;
+                
+                font-weight: lighter;
+            }
+            .normText, .category-content{
+                font-family: Roboto;
+                font-size:19;
+                
+                font-weight: normal;
+            }
+            .category{
+                font-family: Roboto;
+                font-weight: bold;
+                font-size: 30;
+                
+                vertical-align: top;
+            }
+        </style>
+        <ul class="nav-bar">
+            <li><a class="nav-elem" href="tableOfContents.html">Table of Contents</a></li>
+            <li><a class="Activated" href="Resume.html">My Resume</a></li>
+            <li><a class="nav-elem" href="DesignPage.html">Design Page</a></li>
+        </ul>
+        <br><br><br><br>
+
+        <table id="resume">
+            <tr>
+                <td id="title">Edwin Chen</td>
+                <td class="normText" rowspan="2" align="right" valign="top" width="60%">
+                    <b>E-mail:</b><br> 
+                    <b>Phone:</b><br> 
+                    <b>Address:</b><br> 
+                </td>
+                <td class="normText" align="right" valign="top" rowspan="2">
+                    echen7@ocdsb.com<br>
+                    613-478-9090<br>
+                    812 Green Bean Way  
+                </td>
+            </tr>
+            <tr>
+                <td id="subtitle">High School Student<br><br><br><br><br></td>
+            </tr>
+            <tr>
+                <td class="category" height="100">Education</td>
+                <td valign="top">
+                    
+                    <ul class="category-content">
+                        <li> <b> Colonel By Secondary School </b> </li>
+                        <ul>
+                            <li>In the process of obtaining the International Baccalaureate Diploma</li>
+                            <li>Obtained an acceptable average mark in Grade 9 </li>
+                        </ul>
+                        <br>
+                        <li> <b> Earl of March Secondary School </b> </li>
+                        <ul>
+                            <li>Passed grade 7 and 8 without an struggles</li>
+                            <li>Assisted and encouraged many of my peers when they did not understand the coursework</li>
+                        </ul>
+                        
+                        <br>
+
+                        <li> <b> W. Erskine Johnston Public School </b> </li>
+                        <ul>
+                            <li>Completed a baby sitting course with a grade of 100%</li>
+                            <li>Went through grades 1-6 without being sent to the office</li>
+                            <br><br>
+                        </ul>
+                    </ul>
+                </td>
+                <td class="category-content" valign="top" align="right">
+                    <b>
+                        2016-Current
+                        <br><br><br><br>
+                        2014-2016
+                        <br><br><br><br>
+                        2008-2014
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td class="category" height="100">Interests</td>
+                <td valign="top">
+                    <ul class="category-content">
+                        <li> <b> Badminton </b> </li>
+                        <ul>
+                            <li>Was part of the highschool badminton team </li>
+                            <li>Plays at least two times a week </li>
+                        </ul>
+                        <br>
+                        <li> <b> Programming </b> </li>
+                        <ul>
+                            <li> Fairly competent using Python</li>
+                            <li> Familiar with using Unity3D, GitHub and Command Line </li>
+                        </ul>
+                        
+                        <br>
+
+                        <li> <b> Mathematics </b> </li>
+                        <ul>
+                            <li>Watches math Youtube videos to quench my interest </li>
+                            <li>Actively pays attention in math class</li>
+                        </ul>
+                        <br><br>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="category" height="100">Career Objective </td>
+                <td valign="top">
+                    <ul class="category-content">
+                        <li> <b> University of Toronto </b> </li>
+                        <ul>
+                            <li> Will hopefully get into UofT majoring in Computer Science</li>
+                            <li> Perhaps obtain a Computer Science related PHD degree</li>
+                        </ul>
+                        <br>
+                        <li> <b> Machine Learning Related Job Path </b> </li>
+                        <ul>
+                            <li>Relatively high paying job dealing with state of the art machine learning technology</li>
+                            <br><br>
+                        </ul>
+                        
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="category" height="100">Qualifications</td>
+                <td valign="top">
+                    <ul class="category-content">
+                        <li> <b> Badminton </b> </li>
+                        <ul>
+                            <li>Was part of the highschool badminton team </li>
+                            <li>Obtained numerous medals </li>
+                        </ul>
+                        <br>
+                        <li> <b> Programming </b> </li>
+                        <ul>
+                            <li> Fairly competent using Python</li>
+                            <li> Familiar with using Unity3D, GitHub and Command Line </li>
+                        </ul>
+                        
+                        <br>
+
+                        <li> <b> Mathematics </b> </li>
+                        <ul>
+                            <li>Watches math Youtube videos to quench my interest </li>
+                            <li>Actively pays attention in math class</li>
+                        </ul>
+                        <br><br>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="category" height="100">Work Experience</td>
+                <td valign="top">
+                    <ul class="category-content">
+                        <li> <b> Badminton </b> </li>
+                        <ul>
+                            <li>Was part of the highschool badminton team </li>
+                            <li>Obtained numerous medals </li>
+                        </ul>
+                        <br>
+                        <li> <b> Programming </b> </li>
+                        <ul>
+                            <li> Fairly competent using Python</li>
+                            <li> Familiar with using Unity3D, GitHub and Command Line </li>
+                        </ul>
+                        
+                        <br>
+
+                        <li> <b> Mathematics </b> </li>
+                        <ul>
+                            <li>Watches math Youtube videos to quench my interest </li>
+                            <li>Actively pays attention in math class</li>
+                        </ul>
+                        <br><br>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <tr>
+                    <td class="category" height="100">Work Experience</td>
+                    <td valign="top">
+                        <ul class="category-content">
+                            <li> <b> Badminton </b> </li>
+                            <ul>
+                                <li>Was part of the highschool badminton team </li>
+                                <li>Obtained numerous medals </li>
+                            </ul>
+                            <br>
+                            <li> <b> Programming </b> </li>
+                            <ul>
+                                <li> Fairly competent using Python</li>
+                                <li> Familiar with using Unity3D, GitHub and Command Line </li>
+                            </ul>
+                            
+                            <br>
+    
+                            <li> <b> Mathematics </b> </li>
+                            <ul>
+                                <li>Watches math Youtube videos to quench my interest </li>
+                                <li>Actively pays attention in math class</li>
+                            </ul>
+                            <br><br>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td class="category" height="100">Additional Skills</td>
+                        <td valign="top">
+                            <ul class="category-content">
+                                <li> <b> Badminton </b> </li>
+                                <ul>
+                                    <li>Was part of the highschool badminton team </li>
+                                    <li>Obtained numerous medals </li>
+                                </ul>
+                                <br>
+                                <li> <b> Programming </b> </li>
+                                <ul>
+                                    <li> Fairly competent using Python</li>
+                                    <li> Familiar with using Unity3D, GitHub and Command Line </li>
+                                </ul>
+                                
+                                <br>
+        
+                                <li> <b> Mathematics </b> </li>
+                                <ul>
+                                    <li>Watches math Youtube videos to quench my interest </li>
+                                    <li>Actively pays attention in math class</li>
+                                </ul>
+                                <br><br>
+                            </ul>
+                        </td>
+                    </tr>
+                <tr>      
+        </table>
+        
+    </head>
+</html>

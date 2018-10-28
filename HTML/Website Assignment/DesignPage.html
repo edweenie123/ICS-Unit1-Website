@@ -1,0 +1,314 @@
+<html>
+    <!-- Edwin Chen -->
+    <head>
+        
+        <style>
+            @font-face { font-family: "Roboto"; src: url('Fonts/Roboto-Medium.ttf');}
+            @font-face { font-family: "Roboto"; font-weight: bold; src: url('Fonts/Roboto-Bold.ttf');}
+            @font-face { font-family: "Roboto"; font-weight: lighter; src: url('Fonts/Roboto-Thin.ttf');}
+            
+            /* Changes text select color */
+            ::selection {
+                background: #6d0000
+            }
+            body{
+                background-color: black;
+            }
+            ul{
+                /* Removes list dots */
+                list-style-type:none;
+                /* Remove margin from top*/
+                margin: 0;
+                /* Remove padding from left*/
+                padding: 0;
+                left: -1;
+                background-color: #1c1c1c;
+                /* Make it so the position of the nav bar never changes*/
+                position: fixed;
+
+                /* Set navbar 0px from the top */
+                top: 0;
+                width: 101%;
+
+                /* Creates shadow around the dropdown navbar */
+                box-shadow: 0px 10px 25px rgba(0,0,0,0.7); 
+
+                /* Make it so images don't render above the navbar*/
+                z-index: 1;
+            }
+            li{
+                /* Makes list elements go left to right*/
+                float: left;
+            }
+
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                
+                /* Changes the width and height of the element */
+                padding: 23px 26px;
+                text-decoration: none;
+                font-family: Roboto;
+            }
+            .activated{
+                /* Using the rgb values for color */
+                background-color: rgb(58, 32, 42);
+                color: white;
+            }
+            .nav-elem:hover{
+                background-color: #2b2b2b;
+            }
+
+            .side-nav{
+                height: 100%;
+                text-align: center;
+                vertical-align: middle;
+                width: 300px;
+                position: fixed;
+                top: 65.5;
+                left: 0;
+                background-color:#161616;
+                padding-top: 200px;
+                box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+                z-index: 1; 
+            }
+
+            .side-nav a{
+                padding: 20px;
+                text-decoration: none;
+                font-family: Roboto;
+                font-weight: lighter;
+                color: white;
+                font-size: 20;
+                display: block;
+                box-shadow: 0px 10px 25px rgba(0,0,0,0.3); 
+            }
+
+            .side-nav a:hover{
+                background-color: black;
+            }
+
+            .main{
+                margin-top: 100px;
+                margin-left: 300px;
+                margin-bottom: 100px;
+
+            }
+            .img-contain{
+                position: relative;
+            }
+            #mountImg{
+                width:100%;
+                /* Changes speed of transform changes */
+                transition: transform 3s;
+            }
+
+            #mountImg:hover{
+                /* Scales up the size of the img */
+                transform: scale(1.05)
+            }
+            h1{
+                color:white;
+                font-family: Roboto;
+                font-size: 70px;
+                position: absolute;
+                top: 33%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h2{
+                color:white;
+                font-family: Roboto;
+                font-weight: lighter;
+                font-size: 20px;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            h3{
+                color:white;
+                font-family: Roboto;
+                font-weight: lighter;
+                font-size: 27px;
+            }
+            h4{
+                color:rgb(153, 153, 153);
+                font-family: Roboto;
+                font-weight: lighter;
+                font-size: 17px;
+                /* Changes line spacing to 1.6 */
+                line-height: 1.6;
+                /* Justifies text */
+                text-align: justify;
+            }
+            hr{
+                margin-left: 0;
+                width: 28%;
+                border: 0;
+                color: white;
+                height: 1px;
+                background-color: white;
+            }
+            .content{
+                margin-left: 130px;
+                margin-right: 130px;
+            }
+            .hoverImg{
+                /* Adds grayscale filter to img (intensity 0-1) */
+                filter: grayscale(1);
+                /* Changes speed of transform changes */
+                transition: transform 0.15s;
+            }
+            .hoverImg:hover{
+                filter: grayscale(0.5);
+                /* Scales up the size of the img */
+                transform: scale(1.005);
+            }
+            
+            .courseTable{
+                width:100%;
+                border-color: white;
+                vertical-align: top;
+                font-family: Roboto;
+                color: white;
+                /* Simplifies border */
+                border-collapse: collapse;
+            }
+
+            .courseTable td, .courseTable th{
+                border: 1px solid #ddd;
+                padding: 10px;
+            }
+
+            .courseTable th{
+                background-color:#161616;
+            }
+            
+            .courseTable tr:hover{
+                background-color: #2b2b2b;
+            }
+            /* CSS for Youtube Players */
+            iframe{
+                width: 100%;
+                height: 520px;
+            }
+        </style>
+        <ul>
+            <li><a class="nav-elem" href="tableOfContents.html">Table of Contents</a></li>
+            <li><a class="nav-elem" href="Resume.html">My Resume</a></li>
+            <li><a class="Activated" href="DesignPage.html">Design Page</a></li>
+        </ul>
+
+        <div class="side-nav">
+            <a href="#About">ABOUT ME</a>
+            <a href="#Courses">COURSES</a>
+            <a href="#Interests">INTERESTS</a>
+            <a href="#Favourite">FAVOURITE VIDEOS</a>
+        </div>
+        
+        <div class="main">
+            <div class="img-contain">
+                <img id="mountImg"src="Images/black-moutain.png">
+                <h1>DESIGN PAGE</h1>
+                <h2>AN ISC2O ASSIGNMENT</h2>
+            </div>
+
+            <div class="content">
+                <a name="About"><br><br><br></a>
+                <h3>ABOUT ME<hr></h3>
+                
+                <h4>
+                    Hi. I currently have the name of Edwin Chen, and I’m attending grade.10 at Colonel By Secondary School. I was born in
+                    Queensway Carleton Hospital in Ottawa and from my last name, I’m sure that you can discern that I come from Chinese
+                    heritage. Being in the pre-ib program, I am expected to learn at an accelerated pace. As such, I have a slightly above
+                    average amount of stress compared to the average teenager. Generally, I don’t have much of an issue with my school 
+                    work and usually, I am capable of attaining fairly decent marks. I’d like to think that I am reasonably responsible and
+                    organized with how I deal with work; however, I am very liable to procrastinate on assignments I don’t particularly enjoy
+                    doing. As for future aspirations, I plan to attend either UofT, UWaterloo or UBC majoring in Computer Science.   
+                </h4>
+                
+                <img width="60%" height="40%" class="hoverImg" src="Images/cb.jpg">
+                <img width="39%" height="40%" class="hoverImg" src="Images/uoft.jpg">
+
+                <a name="Courses"></a>
+                
+                <h3><br><br><br>COURSES<hr></h3>
+
+                <table class="courseTable">
+                    <tr>
+                        <!-- <th> is to define table headings -->
+                        <th>PERIOD</td>
+                        <th>DAY 1</td>
+                        <th>DAY 2</td>
+                        <th>DAY 3</td>
+                        <th>DAY 4</td>
+                    </tr>
+                    <tr>
+                        <td>PERIOD 1</td>
+                        <td>ENG2DE-07 <br> Harris,K. <br><br> 223</td>
+                        <td>CHC2DE-02 <br> Reiche,A. <br><br> 152</td>
+                        <td>FSF2DE-01 <br> Labrie,M. <br><br> 128</td>
+                        <td>MPM2DE-04 <br> Lee,J. <br><br> PORT6</td>
+                    </tr>
+                    <tr>
+                        <td>PERIOD 2</td>
+                        <td>FSF2DE-01 <br> Labrie,M. <br><br> 128</td>
+                        <td>MPM2DE-04 <br> Lee,J. <br><br> PORT6</td>
+                        <td>ENG2DE-07 <br> Harris,K. <br><br> 223</td>
+                        <td>CHC2DE-02 <br> Reiche,A. <br><br> 152</td>
+                    </tr>
+                    <tr>
+                        <td>PERIOD 3</td>
+                        <td>BBI2O <br> Hutchinson,B. <br><br> 160</td>
+                        <td>CGF3ME-02 <br> Beard,B. <br><br> 154</td>
+                        <td>SNC2DE-05 <br> Porter,M. <br><br> 201</td>
+                        <td>ICS2O <br> Kutschke,S. <br><br> 212</td>
+                    </tr>
+                    <tr>
+                        <td>PERIOD 1</td>
+                        <td>SNC2DE-05 <br> Porter,M. <br><br> 201</td>
+                        <td>ICS2O <br> Kutschke,S. <br><br> 212</td>
+                        <td>BBI2O <br> Hutchinson,B. <br><br> 160</td>
+                        <td>CGF3ME-02 <br> Beard,B. <br><br> 154</td>
+                    </tr>
+                </table>
+
+                <a name="Interests"><br><br><br></a>
+                <h3>INTERESTS<hr></h3>
+                
+                <h4>As far as my own interests go, I have, for a while, had an interest in programming and its many uses as I see it as my
+                    primary career path. As a result of this interest, I have grown familiar with many applications that utilize programming
+                    such as Unity3D, Processing and GitHub. Through my interest in programming, I have discovered many machine learning 
+                    videos displaying an algorithm learning how to play certain games. Upon doing more research, I found that machine
+                    learning was a very math heavy disciple which synergizes well with my interest in math. As a result, I have also developed
+                    a deep interest in machine learning. 
+                    <br><br>
+                    Most of the time, I prefer to get my physical exercise through playing badminton. I first started playing in grade 7 and 
+                    have been playing it ever since. I was surprised to find that this sport was not simply a game of brute strength, but a
+                    game of immense amount of strategy and calculation. As such, this sport has taught me a valuable lesson which was 
+                    that acting out on your frustrations was never a good idea. Although being frustrated may boost your brute strength, it 
+                    would significantly hinder your ability to strategize which would ultimately lose you the game.   
+                </h4>
+
+                <img width="39%" height="40%" class="hoverImg" src="Images/badminton.jpg">
+                <img width="60%" height="40%" class="hoverImg" src="Images/coding.jpg">
+                
+                <a name="Favourite"></a>
+                <h3><br><br><br>FAVOURITE VIDEOS<hr></h3>
+                
+                <!-- Inserts Youtube Player -->
+                <iframe src="https://www.youtube.com/embed/rxGuNJ-nEYg" 
+                frameborder="0" encrypted-media" allowfullscreen></iframe>
+                <br><br><br><br><br><br>
+                <iframe src="https://www.youtube.com/embed/yRpgnMDr7Ms" 
+                frameborder="0" encrypted-media" allowfullscreen></iframe>
+                <br><br><br><br><br><br>
+                <iframe src="https://www.youtube.com/embed/GUq1Wp4LdZI" 
+                frameborder="0" encrypted-media" allowfullscreen></iframe>
+            
+            </div>
+    </head> 
+</html>
